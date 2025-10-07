@@ -1,0 +1,13 @@
+/**
+ * Theatre of Tragedy - Стили для навигации
+ * 
+ * © 2025 Igor Silin. Все права защищены.
+ */
+
+// Базовые стили навигации определены в components/_menu.scss
+// Этот файл для дополнительных layout-специфичных стилей
+
+nav {
+    position: relative;
+    z-index: 100;
+}

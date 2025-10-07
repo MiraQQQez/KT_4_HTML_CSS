@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Метаданные для корректного отображения и SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Theatre of Tragedy - норвежская готик-метал группа. История, дискография, участники группы.">
+    <meta name="keywords" content="Theatre of Tragedy, готик метал, норвежская музыка, Liv Kristine, Raymond Rohonyi">
+    <title>Theatre of Tragedy - Официальная страница группы</title>
+    
+    <!-- Подключение стилей CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Предзагрузка шрифтов для лучшей производительности -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Заголовок страницы с основной информацией о группе -->
+    <!-- Используется header для обозначения шапки сайта с главной информацией -->
+    <header>
+        <!-- Интерактивное анимированное лого -->
+        <div class="logo-container">
+            <div class="logo-animated">
+                <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="logo-circle" cx="100" cy="100" r="80" fill="none" stroke="#FFD700" stroke-width="3"/>
+                    <path class="logo-path" d="M 60 100 L 100 60 L 140 100 L 100 140 Z" fill="#8B0000" stroke="#FFD700" stroke-width="2"/>
+                    <text class="logo-text" x="100" y="110" text-anchor="middle" fill="#FFD700" font-size="24" font-weight="bold">ToT</text>
+                </svg>
+            </div>
+        </div>
+        
+        <h1>Theatre of Tragedy</h1>
+        <!-- Подзаголовок с кратким описанием группы -->
+        <p>Норвежская готик-метал группа • 1993-2010</p>
+        
+        <!-- Бургер-меню для мобильной версии -->
+        <button class="burger-menu" id="burgerMenu" aria-label="Открыть меню">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        
+        <!-- Навигационное меню для перехода по разделам страницы -->
+        <!-- nav используется для создания навигации по сайту -->
+        <nav class="nav-flex" id="mainNav">
+            <ul>
+                <li><a href="#about">О группе</a></li>
+                <li><a href="#history">История</a></li>
+                <li><a href="#members">Участники</a></li>
+                <li><a href="#discography">Дискография</a></li>
+                <li><a href="#legacy">Наследие</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое страницы -->
+    <!-- main используется для обозначения основного контента страницы -->
+    <main>
+        <!-- Раздел "О группе" -->
+        <!-- section используется для логического разделения контента на тематические блоки -->
+        <section id="about">
+            <!-- h2 используется для заголовков разделов (иерархия заголовков) -->
+            <h2>О группе</h2>
+            <!-- article используется для самостоятельного контента, который может быть переиспользован -->
+            <article>
+                <p>
+                    <strong>Theatre of Tragedy</strong> — норвежская готик-метал группа, образованная в 1993 году в городе Ставангер. 
+                    Группа стала одним из пионеров жанра готик-метал и оказала значительное влияние на развитие симфонического метала.
+                </p>
+                <p>
+                    Отличительной особенностью группы было сочетание мужского гроулинга и чистого женского вокала, 
+                    а также использование архаичного английского языка в текстах ранних альбомов.
+                </p>
+            </article>
+        </section>
+
+        <!-- Раздел истории группы -->
+        <section id="history">
+            <h2>История группы</h2>
+            
+            <!-- Подразделы истории по периодам -->
+            <article>
+                <h3>Ранние годы (1993-1998)</h3>
+                <p>
+                    Группа была основана в 1993 году гитаристами Томми Линдалом и Пэлом Бьёрнстадом. 
+                    В 1994 году к группе присоединилась вокалистка Лив Кристин, которая стала визитной карточкой коллектива.
+                </p>
+                
+                <!-- Список ключевых событий -->
+                <!-- ul используется для создания неупорядоченного списка -->
+                <ul>
+                    <li><strong>1995</strong> — Выход дебютного альбома "Theatre of Tragedy"</li>
+                    <li><strong>1996</strong> — Альбом "Velvet Darkness They Fear"</li>
+                    <li><strong>1998</strong> — Релиз "Aégis"</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Период экспериментов (1999-2005)</h3>
+                <p>
+                    В конце 90-х группа начала экспериментировать со звучанием, добавляя электронные элементы 
+                    и отходя от классического готик-метала к более современному звучанию.
+                </p>
+            </article>
+
+            <article>
+                <h3>Завершение карьеры (2006-2010)</h3>
+                <p>
+                    После ухода Лив Кристин в 2003 году группа продолжила работу с новой вокалисткой Нелл Сигланд, 
+                    но в 2010 году официально объявила о прекращении деятельности.
+                </p>
+            </article>
+        </section>
+
+        <!-- Раздел с информацией об участниках -->
+        <section id="members">
+            <h2>Участники группы</h2>
+            
+            <!-- Интерактивные flip-карточки участников -->
+            <div class="members-grid">
+                <!-- Карточка 1: Лив Кристин -->
+                <div class="member-card">
+                    <div class="member-card-inner">
+                        <div class="member-card-front">
+                            <div class="member-avatar">LK</div>
+                            <h3>Лив Кристин Эспенес</h3>
+                            <p class="member-role">Вокал (1994-2003)</p>
+                        </div>
+                        <div class="member-card-back">
+                            <h3>Лив Кристин</h3>
+                            <p>Норвежская певица, ставшая иконой готик-метала. Её ангельский голос стал визитной карточкой группы.</p>
+                            <p><strong>Достижения:</strong> Основала Leaves' Eyes, записала 4 альбома с ToT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 2: Раймонд Рохоньи -->
+                <div class="member-card">
+                    <div class="member-card-inner">
+                        <div class="member-card-front">
+                            <div class="member-avatar">RR</div>
+                            <h3>Раймонд Рохоньи</h3>
+                            <p class="member-role">Вокал, гроулинг (1993-2010)</p>
+                        </div>
+                        <div class="member-card-back">
+                            <h3>Раймонд Рохоньи</h3>
+                            <p>Основатель группы и мастер гроулинга. Его мощный вокал создавал идеальный контраст с женским голосом.</p>
+                            <p><strong>Роль:</strong> Автор текстов, идейный вдохновитель</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 3: Томми Линдал -->
+                <div class="member-card">
+                    <div class="member-card-inner">
+                        <div class="member-card-front">
+                            <div class="member-avatar">TL</div>
+                            <h3>Томми Линдал</h3>
+                            <p class="member-role">Гитара (1993-2010)</p>
+                        </div>
+                        <div class="member-card-back">
+                            <h3>Томми Линдал</h3>
+                            <p>Один из основателей группы. Создатель мрачных и атмосферных гитарных партий.</p>
+                            <p><strong>Вклад:</strong> Композитор, аранжировщик</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 4: Нелл Сигланд -->
+                <div class="member-card">
+                    <div class="member-card-inner">
+                        <div class="member-card-front">
+                            <div class="member-avatar">NS</div>
+                            <h3>Нелл Сигланд</h3>
+                            <p class="member-role">Вокал (2004-2010)</p>
+                        </div>
+                        <div class="member-card-back">
+                            <h3>Нелл Сигланд</h3>
+                            <p>Заменила Лив Кристин и привнесла свой уникальный стиль в звучание группы.</p>
+                            <p><strong>Альбомы:</strong> Storm (2006), Forever Is the World (2009)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел дискографии -->
+        <section id="discography">
+            <h2>Дискография</h2>
+            
+            <!-- Интерактивный слайдер альбомов -->
+            <article>
+                <h3>Студийные альбомы</h3>
+                
+                <div class="slider-container">
+                    <button class="slider-btn slider-btn-prev" id="sliderPrev" aria-label="Предыдущий альбом">‹</button>
+                    
+                    <div class="slider-wrapper">
+                        <div class="slider-track" id="sliderTrack">
+                            <!-- Слайд 1 -->
+                            <div class="slider-slide">
+                                <div class="album-card-slider">
+                                    <div class="album-cover">1995</div>
+                                    <h4>Theatre of Tragedy</h4>
+                                    <p><strong>Жанр:</strong> Doom/Death Metal</p>
+                                    <p><strong>Длительность:</strong> 50:12</p>
+                                    <p>Считается лучшим альбомом группы и классикой готик-метала.</p>
+                                    <div class="album-rating">★★★★★</div>
+                                </div>
+                            </div>
+
+                            <!-- Слайд 2 -->
+                            <div class="slider-slide">
+                                <div class="album-card-slider">
+                                    <div class="album-cover">1996</div>
+                                    <h4>Velvet Darkness They Fear</h4>
+                                    <p><strong>Жанр:</strong> Gothic Metal</p>
+                                    <p><strong>Длительность:</strong> 53:08</p>
+                                    <p>Шедевр готик-метала с потрясающей атмосферой.</p>
+                                    <div class="album-rating">★★★★★</div>
+                                </div>
+                            </div>
+
+                            <!-- Слайд 3 -->
+                            <div class="slider-slide">
+                                <div class="album-card-slider">
+                                    <div class="album-cover">1998</div>
+                                    <h4>Aégis</h4>
+                                    <p><strong>Жанр:</strong> Gothic Metal</p>
+                                    <p><strong>Длительность:</strong> 47:33</p>
+                                    <p>Переходный альбом к более мелодичному звучанию.</p>
+                                    <div class="album-rating">★★★★☆</div>
+                                </div>
+                            </div>
+
+                            <!-- Слайд 4 -->
+                            <div class="slider-slide">
+                                <div class="album-card-slider">
+                                    <div class="album-cover">2000</div>
+                                    <h4>Musique</h4>
+                                    <p><strong>Жанр:</strong> Electronic/Industrial</p>
+                                    <p><strong>Длительность:</strong> 44:28</p>
+                                    <p>Радикальная смена стиля в сторону электронной музыки.</p>
+                                    <div class="album-rating">★★★☆☆</div>
+                                </div>
+                            </div>
+
+                            <!-- Слайд 5 -->
+                            <div class="slider-slide">
+                                <div class="album-card-slider">
+                                    <div class="album-cover">2002</div>
+                                    <h4>Assembly</h4>
+                                    <p><strong>Жанр:</strong> Electronic/Industrial</p>
+                                    <p><strong>Длительность:</strong> 45:15</p>
+                                    <p>Продолжение экспериментов с электронным звучанием.</p>
+                                    <div class="album-rating">★★★☆☆</div>
+                                </div>
+                            </div>
+
+                            <!-- Слайд 6 -->
+                            <div class="slider-slide">
+                                <div class="album-card-slider">
+                                    <div class="album-cover">2006</div>
+                                    <h4>Storm</h4>
+                                    <p><strong>Жанр:</strong> Gothic Metal</p>
+                                    <p><strong>Длительность:</strong> 48:17</p>
+                                    <p>Возвращение к готик-метал звучанию с новой вокалисткой.</p>
+                                    <div class="album-rating">★★★★☆</div>
+                                </div>
+                            </div>
+
+                            <!-- Слайд 7 -->
+                            <div class="slider-slide">
+                                <div class="album-card-slider">
+                                    <div class="album-cover">2009</div>
+                                    <h4>Forever Is the World</h4>
+                                    <p><strong>Жанр:</strong> Gothic Metal</p>
+                                    <p><strong>Длительность:</strong> 46:42</p>
+                                    <p>Последний студийный альбом группы.</p>
+                                    <div class="album-rating">★★★★☆</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="slider-btn slider-btn-next" id="sliderNext" aria-label="Следующий альбом">›</button>
+                </div>
+                
+                <!-- Индикаторы слайдера -->
+                <div class="slider-dots" id="sliderDots"></div>
+            </article>
+        </section>
+
+        <!-- Раздел о наследии группы -->
+        <section id="legacy">
+            <h2>Наследие и влияние</h2>
+            
+            <article>
+                <h3>Влияние на жанр</h3>
+                <p>
+                    Theatre of Tragedy считается одной из основополагающих групп готик-метала. 
+                    Их подход к сочетанию мужского и женского вокала стал стандартом для многих групп жанра.
+                </p>
+                
+                <!-- blockquote используется для цитат -->
+                <blockquote>
+                    <p>
+                        "Theatre of Tragedy создали шаблон для готик-метала, который используется до сих пор. 
+                        Их влияние на такие группы как Tristania, The Sins of Thy Beloved и Sirenia неоспоримо."
+                    </p>
+                    <!-- cite используется для указания источника цитаты -->
+                    <cite>— Metal Archives</cite>
+                </blockquote>
+            </article>
+
+            <article>
+                <h3>Награды и признание</h3>
+                <!-- ol используется для упорядоченного (нумерованного) списка -->
+                <ol>
+                    <li>Включение в топ-100 лучших метал-альбомов всех времен (Velvet Darkness They Fear)</li>
+                    <li>Золотой статус альбома "Aégis" в Норвегии</li>
+                    <li>Премия Spellemannprisen за вклад в норвежскую музыку</li>
+                </ol>
+            </article>
+        </section>
+    </main>
+
+    <!-- Подвал страницы с дополнительной информацией -->
+    <!-- footer используется для подвала сайта с контактной информацией и копирайтом -->
+    <footer>
+        <!-- address используется для контактной информации -->
+        <address>
+            <p>Для связи: <a href="mailto:info@theatreoftragedy.com">info@theatreoftragedy.com</a></p>
+        </address>
+        
+        <!-- Информация об авторских правах -->
+        <p>&copy; 2024 Igor Silin. Все права защищены.</p>
+        <p>
+            <small>
+                Данная страница создана в образовательных целях. 
+                Theatre of Tragedy — торговая марка, принадлежащая соответствующим правообладателям.
+            </small>
+        </p>
+        
+        <!-- time используется для указания времени/даты -->
+        <p><small>Последнее обновление: <time datetime="2024-12-03">3 декабря 2024</time></small></p>
+    </footer>
+
+    <!-- Кнопка "Наверх" для улучшения навигации -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Прокрутить наверх">
+        ↑
+    </button>
+
+    <!-- Подключение JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

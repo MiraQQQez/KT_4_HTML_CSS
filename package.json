@@ -1,0 +1,29 @@
+{
+    "name": "theatre-of-tragedy-website",
+    "version": "1.0.0",
+    "description": "Официальная страница группы Theatre of Tragedy - КТ №2",
+    "main": "index.html",
+    "scripts": {
+      "build-css": "sass styles/main.scss styles/main.css --style=expanded",
+      "watch-css": "sass styles/main.scss styles/main.css --watch --style=expanded",
+      "build-css-compressed": "sass styles/main.scss styles/main.min.css --style=compressed"
+    },
+    "keywords": [
+      "theatre-of-tragedy",
+      "gothic-metal",
+      "website",
+      "sass",
+      "css"
+    ],
+    "author": "Igor Silin",
+    "license": "All Rights Reserved",
+    "devDependencies": {
+      "sass": "^1.69.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "local"
+    },
+    "homepage": "./index.html"
+  }
+  

@@ -1,0 +1,39 @@
+/**
+ * Theatre of Tragedy - Стили для подвала
+ * 
+ * © 2025 Igor Silin. Все права защищены.
+ */
+
+footer {
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(0, 0, 0, 0.95));
+    padding: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    border-top: 2px solid #FFD700;
+    margin-top: 4rem;
+    
+    p {
+        margin: 0.5rem 0;
+        color: #B0B0B0;
+    }
+    
+    a {
+        color: #FFD700;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: #FFF;
+            text-decoration: underline;
+        }
+    }
+    
+    small {
+        font-size: 0.85rem;
+        color: #808080;
+    }
+    
+    address {
+        font-style: normal;
+        margin: 1rem 0;
+    }
+}

@@ -1,0 +1,147 @@
+/*
+ * Компоненты цитат
+ * © 2024 Igor Silin. Все права защищены.
+ */
+
+// === БАЗОВЫЕ ЦИТАТЫ ===
+.quote {
+    @include card-base;
+    position: relative;
+    font-style: italic;
+    font-size: $font-size-lg;
+    line-height: $line-height-relaxed;
+    
+    // Большие декоративные кавычки
+    &::before {
+        content: '"';
+        font-size: 4rem;
+        color: $color-accent;
+        position: absolute;
+        top: -10px;
+        left: $spacing-md;
+        font-family: $font-family-heading;
+        opacity: 0.3;
+        z-index: 0;
+    }
+    
+    &::after {
+        content: '"';
+        font-size: 4rem;
+        color: $color-accent;
+        position: absolute;
+        bottom: -40px;
+        right: $spacing-md;
+        font-family: $font-family-heading;
+        opacity: 0.3;
+        z-index: 0;
+    }
+    
+    .quote__text {
+        position: relative;
+        z-index: 1;
+        margin-bottom: $spacing-md;
+        color: $color-text-primary;
+    }
+    
+    .quote__author {
+        text-align: right;
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        font-style: normal;
+        position: relative;
+        z-index: 1;
+        
+        &::before {
+            content: '— ';
+            color: $color-accent;
+        }
+    }
+}
+
+// === ВАРИАНТЫ ЦИТАТ ===
+.quote {
+    &--highlight {
+        border-left: 4px solid $color-accent;
+        @include glow-effect($color-accent, 0.3);
+        
+        &::before,
+        &::after {
+            color: $color-accent;
+            opacity: 0.6;
+        }
+    }
+    
+    &--minimal {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: $spacing-lg 0;
+        
+        &::before,
+        &::after {
+            display: none;
+        }
+        
+        .quote__text {
+            border-left: 3px solid $color-accent;
+            padding-left: $spacing-lg;
+        }
+    }
+    
+    &--centered {
+        text-align: center;
+        
+        .quote__author {
+            text-align: center;
+        }
+        
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        &::after {
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+}
+
+// === СПЕЦИАЛЬНЫЕ ЦИТАТЫ ===
+.testimonial {
+    @include card-base;
+    text-align: center;
+    
+    .testimonial__text {
+        font-size: $font-size-lg;
+        font-style: italic;
+        margin-bottom: $spacing-lg;
+        color: $color-text-primary;
+        line-height: $line-height-relaxed;
+    }
+    
+    .testimonial__author {
+        .author__name {
+            color: $color-accent;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-base;
+        }
+        
+        .author__title {
+            color: $color-text-secondary;
+            font-size: $font-size-sm;
+            margin-top: $spacing-xs;
+        }
+    }
+    
+    // Декоративные звезды для отзывов
+    &::before {
+        content: '★ ★ ★ ★ ★';
+        color: $color-accent;
+        font-size: $font-size-sm;
+        position: absolute;
+        top: $spacing-md;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

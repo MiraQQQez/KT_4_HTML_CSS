@@ -1,0 +1,156 @@
+/*
+ * Компоненты карточек
+ * © 2024 Igor Silin. Все права защищены.
+ */
+
+// === БАЗОВЫЕ КАРТОЧКИ ===
+.card {
+    @include card-base;
+    
+    &--transparent {
+        background: rgba($color-bg-card, 0.5);
+        backdrop-filter: blur(15px);
+    }
+    
+    &--solid {
+        background: $color-bg-secondary;
+        backdrop-filter: none;
+    }
+    
+    &--accent {
+        border: 2px solid $color-accent;
+        @include glow-effect($color-accent, 0.3);
+    }
+    
+    &--interactive {
+        cursor: pointer;
+        
+        &:hover {
+            transform: translateY(-8px) scale(1.02);
+            @include glow-effect($color-accent, 0.5);
+        }
+        
+        &:active {
+            transform: translateY(-4px) scale(1.01);
+        }
+    }
+}
+
+// === ЗАГОЛОВКИ КАРТОЧЕК ===
+.card__header {
+    border-bottom: 1px solid rgba($color-accent, 0.2);
+    padding-bottom: $spacing-md;
+    margin-bottom: $spacing-md;
+    
+    h3, h4 {
+        margin-bottom: $spacing-xs;
+        
+        &::after {
+            display: none;
+        }
+    }
+}
+
+// === КОНТЕНТ КАРТОЧЕК ===
+.card__content {
+    flex: 1;
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// === ПОДВАЛ КАРТОЧЕК ===
+.card__footer {
+    border-top: 1px solid rgba($color-accent, 0.2);
+    padding-top: $spacing-md;
+    margin-top: $spacing-md;
+    
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+}
+
+// === СПЕЦИАЛЬНЫЕ КАРТОЧКИ ===
+.album-card {
+    @include card-base;
+    position: relative;
+    overflow: hidden;
+    
+    // Декоративный диск
+    &::before {
+        @include pseudo;
+        width: 80px;
+        height: 80px;
+        background: 
+            radial-gradient(circle at center, 
+                $color-dark 20%, 
+                $color-accent 21%, 
+                $color-accent 25%, 
+                $color-dark 26%);
+        border-radius: $border-radius-full;
+        top: $spacing-md;
+        right: $spacing-md;
+        opacity: 0.3;
+        z-index: 0;
+    }
+    
+    .album-card__title {
+        color: $color-accent;
+        font-size: $font-size-xl;
+        margin-bottom: $spacing-md;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .album-card__info {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: $spacing-xs $spacing-sm;
+        margin-bottom: $spacing-md;
+        position: relative;
+        z-index: 1;
+        
+        .label {
+            color: $color-text-accent;
+            font-weight: $font-weight-medium;
+        }
+        
+        .value {
+            color: $color-text-primary;
+        }
+    }
+    
+    .album-card__description {
+        font-style: italic;
+        color: $color-text-secondary;
+        border-top: 1px solid rgba($color-accent, 0.3);
+        padding-top: $spacing-md;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.member-card {
+    @include card-base;
+    text-align: center;
+    
+    .member-card__name {
+        color: $color-accent;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-sm;
+    }
+    
+    .member-card__role {
+        color: $color-text-secondary;
+        font-style: italic;
+        margin-bottom: $spacing-md;
+    }
+    
+    .member-card__period {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        font-family: $font-family-accent;
+    }
+}

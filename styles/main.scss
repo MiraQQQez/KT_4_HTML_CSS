@@ -1,0 +1,50 @@
+/*
+ * Theatre of Tragedy - Официальная страница группы
+ * Главный файл стилей (SCSS)
+ * 
+ * © 2024 Igor Silin. Все права защищены.
+ */
+
+// Импорт всех компонентов стилей
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/reset';
+@import 'core/typography';
+
+@import 'layouts/header';
+@import 'layouts/navigation';
+@import 'layouts/main';
+@import 'layouts/sections';
+@import 'layouts/footer';
+
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/quotes';
+@import 'components/logo';
+@import 'components/slider';
+@import 'components/menu';
+
+// Основные стили для body
+body {
+    font-family: $font-family-primary;
+    line-height: $line-height-base;
+    color: $color-text-primary;
+    background: $gradient-dark;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    
+    // Плавная прокрутка для якорных ссылок
+    scroll-behavior: smooth;
+}
+
+// Контейнер для ограничения ширины контента
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    
+    @include respond-to(tablet) {
+        padding: 0 $spacing-sm;
+    }
+}

@@ -1,0 +1,277 @@
+/*
+ * Типографика проекта
+ * © 2024 Igor Silin. Все права защищены.
+ */
+
+// === ЗАГОЛОВКИ ===
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-heading;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    margin-bottom: $spacing-md;
+    color: $color-text-primary;
+    
+    // Добавляем декоративную линию под заголовками
+    &::after {
+        @include decorative-line($color-accent, 50px, 3px);
+    }
+}
+
+h1 {
+    font-size: $font-size-5xl;
+    @include gradient-text($gradient-accent);
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    
+    @include respond-to(tablet) {
+        font-size: $font-size-4xl;
+    }
+    
+    @include respond-to(mobile) {
+        font-size: $font-size-3xl;
+    }
+    
+    &::after {
+        width: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+h2 {
+    font-size: $font-size-4xl;
+    color: $color-accent;
+    margin-bottom: $spacing-lg;
+    position: relative;
+    
+    @include respond-to(tablet) {
+        font-size: $font-size-3xl;
+    }
+    
+    @include respond-to(mobile) {
+        font-size: $font-size-2xl;
+    }
+    
+    &::after {
+        width: 80px;
+        height: 2px;
+    }
+}
+
+h3 {
+    font-size: $font-size-2xl;
+    color: $color-text-primary;
+    margin-bottom: $spacing-md;
+    
+    @include respond-to(tablet) {
+        font-size: $font-size-xl;
+    }
+    
+    &::after {
+        width: 60px;
+        height: 2px;
+    }
+}
+
+h4 {
+    font-size: $font-size-xl;
+    color: $color-accent;
+    margin-bottom: $spacing-sm;
+    
+    &::after {
+        width: 40px;
+        height: 1px;
+    }
+}
+
+h5 {
+    font-size: $font-size-lg;
+    color: $color-text-primary;
+    margin-bottom: $spacing-sm;
+    
+    &::after {
+        display: none;
+    }
+}
+
+h6 {
+    font-size: $font-size-base;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-xs;
+    
+    &::after {
+        display: none;
+    }
+}
+
+// === ПАРАГРАФЫ ===
+p {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    margin-bottom: $spacing-md;
+    color: $color-text-primary;
+    
+    @include respond-to(mobile) {
+        font-size: $font-size-sm;
+    }
+    
+    // Первый параграф в секции
+    &:first-of-type {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-medium;
+    }
+    
+    // Последний параграф в секции
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+// === ССЫЛКИ ===
+a {
+    color: $color-accent;
+    text-decoration: none;
+    transition: all $transition-base;
+    position: relative;
+    
+    // Эффект подчеркивания при наведении
+    &::before {
+        @include pseudo;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $color-accent;
+        transition: width $transition-base;
+    }
+    
+    &:hover {
+        color: lighten($color-accent, 10%);
+        
+        &::before {
+            width: 100%;
+        }
+    }
+    
+    &:focus {
+        outline: 2px solid $color-accent;
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+}
+
+// === СПИСКИ ===
+ul, ol {
+    margin-bottom: $spacing-md;
+    padding-left: $spacing-lg;
+    
+    li {
+        margin-bottom: $spacing-xs;
+        color: $color-text-primary;
+        line-height: $line-height-base;
+        
+        // Кастомные маркеры для списков
+        &::before {
+            content: '▶';
+            color: $color-accent;
+            font-weight: bold;
+            margin-right: $spacing-xs;
+        }
+    }
+}
+
+// Нумерованные списки
+ol {
+    counter-reset: custom-counter;
+    
+    li {
+        counter-increment: custom-counter;
+        position: relative;
+        
+        &::before {
+            content: counter(custom-counter) '.';
+            color: $color-accent;
+            font-weight: $font-weight-bold;
+            margin-right: $spacing-sm;
+        }
+    }
+}
+
+// === ВЫДЕЛЕНИЕ ТЕКСТА ===
+strong, b {
+    font-weight: $font-weight-bold;
+    color: $color-accent;
+}
+
+em, i {
+    font-style: italic;
+    color: $color-text-accent;
+}
+
+// Маленький текст
+small {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    line-height: $line-height-base;
+}
+
+// === ЦИТАТЫ ===
+blockquote {
+    @include card-base;
+    margin: $spacing-xl 0;
+    padding: $spacing-lg;
+    border-left: 4px solid $color-accent;
+    font-style: italic;
+    font-size: $font-size-lg;
+    position: relative;
+    
+    // Кавычки как псевдоэлементы
+    &::before {
+        content: '"';
+        font-size: $font-size-5xl;
+        color: $color-accent;
+        position: absolute;
+        top: -10px;
+        left: $spacing-md;
+        font-family: $font-family-heading;
+        opacity: 0.5;
+    }
+    
+    p {
+        margin-bottom: $spacing-sm;
+        color: $color-text-primary;
+    }
+    
+    cite {
+        display: block;
+        text-align: right;
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        margin-top: $spacing-md;
+        
+        &::before {
+            content: '— ';
+        }
+    }
+}
+
+// === ВРЕМЯ ===
+time {
+    font-family: $font-family-accent;
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+}
+
+// === АДРЕСА ===
+address {
+    font-style: normal;
+    line-height: $line-height-base;
+    
+    a {
+        color: $color-accent;
+        
+        &:hover {
+            color: lighten($color-accent, 15%);
+        }
+    }
+}

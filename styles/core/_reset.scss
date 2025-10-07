@@ -1,0 +1,87 @@
+/*
+ * Сброс стилей браузера
+ * © 2024 Igor Silin. Все права защищены.
+ */
+
+// Современный CSS Reset
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Убираем стандартные отступы у списков
+ul,
+ol {
+    list-style: none;
+}
+
+// Убираем подчеркивание у ссылок
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Делаем изображения адаптивными
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Убираем границы у кнопок и полей ввода
+button,
+input,
+textarea,
+select {
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+// Убираем стандартные стили у кнопок
+button {
+    background: none;
+    cursor: pointer;
+}
+
+// Убираем стандартные отступы у заголовков
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: inherit;
+}
+
+// Убираем стандартные отступы у параграфов
+p {
+    margin: 0;
+}
+
+// Делаем таблицы более читаемыми
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// Убираем стандартные стили у цитат
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+// Убираем стандартные стили у адресов
+address {
+    font-style: normal;
+}

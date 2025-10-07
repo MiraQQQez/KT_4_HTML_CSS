@@ -1,0 +1,11 @@
+/**
+ * Theatre of Tragedy - Стили для основного контента
+ * 
+ * © 2025 Igor Silin. Все права защищены.
+ */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+}
